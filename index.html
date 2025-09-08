@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista di Attività per Argomento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>📝 Lista di Attività</h1>
+
+    <!-- Form per aggiungere una nuova attività -->
+    <form id="taskForm"> 
+      <input type="text" id="topicInput" placeholder="Argomento (es: Studio)" required /> <!-- campo di testo per scrive largomento-->
+      <input type="text" id="taskInput" placeholder="Attività (es: Leggere il capitolo 3)" required /> <!--Campo per scrivere la descrizione della attività.-->
+      <textarea id="noteInput" placeholder="Osservazioni (facoltativo)"></textarea>
+      <button type="submit">Aggiungi Attività</button>
+    </form>
+
+    <!-- Sezione dove verranno visualizzate le attività -->
+    <section id="taskBoard"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
