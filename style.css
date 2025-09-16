@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   padding: 20px;
 }
 
-/* Container principal */
+/* Main container */
 .container {
   background-color: white;
   padding: 30px;
@@ -25,14 +25,14 @@ body {
   max-width: 500px;
 }
 
-/* Título */
+/* Title */
 h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Formulário */
+/* Form layout */
 form {
   display: flex;
   flex-direction: column;
@@ -66,12 +66,12 @@ button:hover {
   background-color: #357ABD;
 }
 
-/* Área de tarefas */
+/* Task area */
 #taskBoard {
   margin-top: 30px;
 }
 
-/* Estilo de cada tópico */
+/* Style for each topic section */
 .topic-section {
   margin-bottom: 20px;
   padding: 15px;
@@ -85,7 +85,7 @@ button:hover {
   color: #4A90E2;
 }
 
-/* Estilo das tarefas */
+/* Style for individual tasks */
 .task-item {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -103,6 +103,8 @@ button:hover {
   color: #666;
   font-style: italic;
 }
+
+/* Style for completed tasks */
 .completed {
   background-color: #d4edda;
   border-color: #28a745;
@@ -110,6 +112,7 @@ button:hover {
   opacity: 0.8;
 }
 
+/* Action buttons */
 .actions {
   margin-top: 10px;
   display: flex;
