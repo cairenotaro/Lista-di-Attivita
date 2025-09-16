@@ -1,17 +1,19 @@
 const form = document.getElementById("taskForm");
 const taskBoard = document.getElementById("taskBoard");
 
+// Event listener for form submission
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevents page reload
 
   const topic = document.getElementById("topicInput").value.trim();
   const task = document.getElementById("taskInput").value.trim();
   const note = document.getElementById("noteInput").value.trim();
 
-  if (!topic || !task) return;
+  if (!topic || !task) return; // Skip if topic or task is empty
 
   let topicSection = document.querySelector(`[data-topic="${topic}"]`);
 
+  // If topic section doesn't exist, create it
   if (!topicSection) {
     topicSection = document.createElement("div");
     topicSection.classList.add("topic-section");
@@ -20,6 +22,7 @@ form.addEventListener("submit", function (e) {
     taskBoard.appendChild(topicSection);
   }
 
+  // Create task item
   const taskItem = document.createElement("div");
   taskItem.classList.add("task-item");
 
@@ -32,16 +35,19 @@ form.addEventListener("submit", function (e) {
     </div>
   `;
 
-  // Botão de concluir
+  // Button to mark task as completed
   taskItem.querySelector(".done-btn").addEventListener("click", () => {
     taskItem.classList.toggle("completed");
   });
 
-  // Botão de excluir
+  // Button to delete task
   taskItem.querySelector(".delete-btn").addEventListener("click", () => {
     taskItem.remove();
   });
 
+  // Add task to the corresponding topic section
   topicSection.appendChild(taskItem);
+
+  // Reset form fields
   form.reset();
 });
